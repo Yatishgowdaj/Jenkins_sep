@@ -1,0 +1,15 @@
+pipeline{
+    agent{
+        label"machine-2"}
+    stages{
+        stage("git checkout"){
+            stage{
+                step{
+                    gitbranch: "main",
+                    url:"https://github.com/Yatishgowdaj/Jenkins_sep.git",
+                    credentialsId:"2b3039ac-529c-48db-9b3f-23f09543e14f"
+                }
+            }
+        }
+    }
+}
